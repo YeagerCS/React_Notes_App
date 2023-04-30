@@ -3,5 +3,5 @@
 ## Description
 A React Application where you can add, delete and edit notes, if you are logged in. 
 
-## More
+## Backend
 The application uses python with flask in the backend and login authentication with a json web token.
