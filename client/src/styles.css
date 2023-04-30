@@ -1,0 +1,194 @@
+body{
+    background-color: rgb(52, 53, 65);
+    color: whitesmoke;
+    padding: 1rem;
+    max-width: 1200px;
+    font-family: "Berlin Sans FB";
+    margin: 0 auto;
+}
+
+.newNoteForm{
+    display: flex;
+    gap: .25em;
+    flex-direction: column;
+    max-width: 500px;
+    font-size: 22px;
+}
+
+textarea{
+    width: auto;
+    font-family: "Berlin Sans FB";
+    height: 200px;
+    font-size: large;
+    resize: none;
+}
+
+input[type=text]{
+    font-family: "Berlin Sans FB";
+    height: 25px;
+    font-size: large;
+}
+
+.boxStyle{
+    background-color: rgb(64, 204, 255);
+    border: 2px solid rgb(0, 89, 255);
+    border-radius: .25em;
+}
+
+.btnStyle{
+    background-color: rgb(0, 89, 255);
+    color: rgb(64, 204, 255);
+    border: 2px solid rgb(64, 204, 255);
+    border-radius: .25em;
+    transition: .4s;
+    height: 25px;
+    font-family: "Berlin Sans FB";
+    font-size: 16px;
+    width: 250px;
+}
+
+.form button{
+    width: auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.btnStyle:hover{
+    cursor: pointer;
+    background-color: rgba(0, 89, 255, .8);
+    letter-spacing: 1.25px;
+}
+
+.btnStyleDanger:hover{
+    cursor: pointer;
+    background-color: rgba(143, 28, 10, .8);
+    letter-spacing: 1.25px;
+}
+
+.btnStyleDanger{
+    background-color: rgb(143, 28, 10);
+    color: rgb(255, 64, 64);
+    border: 2px solid rgb(255, 64, 64);
+    border-radius: .25em;
+    transition: .4s;
+    height: 25px;
+    font-family: "Berlin Sans FB";
+    font-size: 16px;
+    width: 125px;
+}
+
+li div{
+    display: flex;
+    gap: 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+li{
+    max-width: 400px;
+    width: 400px;
+}
+
+li div section{
+    display: flex;
+    gap: .2em;
+    justify-content: flex-end;
+}
+
+
+#editBtn{
+    width: 125px;
+}
+
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    gap: .2em;
+}
+
+.mainDivider{
+    display: flex;
+    gap: 10em;
+}
+
+#div{
+    margin: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    padding-top: 20px;
+}
+
+a{
+    color:rgb(0, 89, 255);
+    font-size: 20px;
+    transition: .25s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:hover{
+    color:rgba(0, 89, 255, .8);
+}
+
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color:rgb(0, 89, 255);
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  .loginDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  
+  .alert p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color:rgb(107, 215, 255);
+  }
+  
+  .alert button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    height: 35px;
+  }
+  
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    gap: .5em;
+    border: 1px solid rgb(107, 215, 255);
+    border-radius: 1em;
+}
+
+em:not(#date){
+    font-style: normal;
+}
+
+.selected{
+    color: yellow
+}
+
+#searchbtn{
+    width: 100px;
+}
