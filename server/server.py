@@ -28,19 +28,6 @@ def readNotes():
     notes = [{"id": row[0], "title": row[1], "content": row[2], "date": row[3]} for row in rows]
     return jsonify(notes)
 
-@app.route("/readSearch/<string:search>")
-def readSearch(search):
-    conx = pyodbc.connect(conxString)
-    query = "SELECT * from notes WHERE title like ?"
-    cursor = conx.cursor()
-
-    condition = f'%{search}%'
-    cursor.execute(query, (condition,))
-
-    rows = cursor.fetchall()
-    conx.close()
-    notes = [{"id": row[0], "title": row[1], "content": row[2], "date": row[3]} for row in rows]
-    return jsonify(notes)
 
 @app.route("/insertNotes", methods=['POST'])
 def insertNotes():
