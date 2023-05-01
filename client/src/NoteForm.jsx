@@ -5,7 +5,7 @@ export function NoteForm({ handleAddNote, handleEditNote, editNote, loggedIn }){
     const [newTitle, setNewTitle] = useState("")
     const [newContent, setNewContent] = useState("")
     
-    const [displayAlert, setDisplayAlert] = useState(false); // New state variable
+    const [displayAlert, setDisplayAlert] = useState(false); 
 
     useEffect(() =>{
         if(editNote){
@@ -16,7 +16,9 @@ export function NoteForm({ handleAddNote, handleEditNote, editNote, loggedIn }){
 
     function handleNote(e){
         e.preventDefault();
-        document.getElementsByTagName("title")[0].innerText = newTitle;
+        document.getElementsByTagName("title")[0].innerText = newTitle || "Notes";
+
+        if(!newTitle || !newContent) return
 
         if(loggedIn){
             if(editNote) {
@@ -25,7 +27,7 @@ export function NoteForm({ handleAddNote, handleEditNote, editNote, loggedIn }){
                 handleAddNote(newTitle, newContent)
             }
         } else {
-            setDisplayAlert(true); // Display the alert window
+            setDisplayAlert(true);
         }
 
         setNewContent("")
